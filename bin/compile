@@ -117,7 +117,7 @@ ln -s ${DNU_CACHE_LOCATION} ${DNU_LOCAL_CACHE}/cache
 
 # dnu restore $DNU_FLAGS ${PROJECT_JSON_FILE}
 
-echo "dnu restore"
+echo "dnu restore $DNU_FLAGS ${SRC_DIR}"
 dnu restore $DNU_FLAGS ${SRC_DIR}
 
 dnu publish --out ${BUILD_DIR} $DNU_FLAGS --no-source --configuration Release ${PROJECT_JSON_FILE}
